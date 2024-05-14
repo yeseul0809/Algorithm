@@ -4,6 +4,5 @@ function solution(price, money, count) {
   for (let i = 1; i <= count; i++) {
     resultMoney += price * i;
   }
-  if (resultMoney < money) return 0;
-  else if (resultMoney >= money) return resultMoney - money;
+  return resultMoney < money ? 0 : resultMoney - money;
 }
