@@ -1,16 +1,15 @@
 function solution(s) {
   let arr = s.split(" ");
-  let answer = [];
+  let answer = "";
 
   for (let i = 0; i < arr.length; i++) {
-    let answerword = "";
     for (let j = 0; j < arr[i].length; j++) {
-      answerword +=
+      answer +=
         j % 2 === 0
           ? (arr[i][j] = arr[i][j].toUpperCase())
           : (arr[i][j] = arr[i][j].toLowerCase());
     }
-    answer.push(answerword);
+    answer += " ";
   }
-  return answer.join(" ");
+  return answer.slice(0, answer.length - 1);
 }
